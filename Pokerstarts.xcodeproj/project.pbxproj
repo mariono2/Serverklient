@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A566884D1CBBCBFE00DB251B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A566884C1CBBCBFE00DB251B /* main.c */; };
+		A51880BD1CC0E7140058A817 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51880BA1CC0E7140058A817 /* SDL2_image.framework */; };
+		A51880BE1CC0E7140058A817 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51880BB1CC0E7140058A817 /* SDL2_mixer.framework */; };
+		A51880BF1CC0E7140058A817 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51880BC1CC0E7140058A817 /* SDL2.framework */; };
+		A57463691CC65DE90015B449 /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57463681CC65DE90015B449 /* SDL2_net.framework */; };
+		A574636F1CC7A4230015B449 /* HARD START.c in Sources */ = {isa = PBXBuildFile; fileRef = A574636E1CC7A4230015B449 /* HARD START.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A51880B81CC0E6EB0058A817 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = ../../../../Library/Frameworks; sourceTree = "<group>"; };
+		A51880BA1CC0E7140058A817 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		A51880BB1CC0E7140058A817 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
+		A51880BC1CC0E7140058A817 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		A56688491CBBCBFE00DB251B /* Pokerstarts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Pokerstarts; sourceTree = BUILT_PRODUCTS_DIR; };
-		A566884C1CBBCBFE00DB251B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A57463681CC65DE90015B449 /* SDL2_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_net.framework; path = ../../../../Library/Frameworks/SDL2_net.framework; sourceTree = "<group>"; };
+		A574636A1CC768D40015B449 /* ball.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = ball.bmp; path = "../../Library/Developer/Xcode/DerivedData/Pokerstarts-dniqalcspoxpuwejtzjcvkvxhirg/Build/Products/Debug/ball.bmp"; sourceTree = "<group>"; };
+		A574636B1CC768D40015B449 /* ball2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = ball2.bmp; path = "../../Library/Developer/Xcode/DerivedData/Pokerstarts-dniqalcspoxpuwejtzjcvkvxhirg/Build/Products/Debug/ball2.bmp"; sourceTree = "<group>"; };
+		A574636E1CC7A4230015B449 /* HARD START.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "HARD START.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57463691CC65DE90015B449 /* SDL2_net.framework in Frameworks */,
+				A51880BF1CC0E7140058A817 /* SDL2.framework in Frameworks */,
+				A51880BD1CC0E7140058A817 /* SDL2_image.framework in Frameworks */,
+				A51880BE1CC0E7140058A817 /* SDL2_mixer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +56,15 @@
 		A56688401CBBCBFE00DB251B = {
 			isa = PBXGroup;
 			children = (
-				A566884B1CBBCBFE00DB251B /* Pokerstarts */,
+				A574636E1CC7A4230015B449 /* HARD START.c */,
+				A57463681CC65DE90015B449 /* SDL2_net.framework */,
+				A51880BA1CC0E7140058A817 /* SDL2_image.framework */,
+				A51880BB1CC0E7140058A817 /* SDL2_mixer.framework */,
+				A51880BC1CC0E7140058A817 /* SDL2.framework */,
+				A51880B81CC0E6EB0058A817 /* Frameworks */,
 				A566884A1CBBCBFE00DB251B /* Products */,
+				A574636A1CC768D40015B449 /* ball.bmp */,
+				A574636B1CC768D40015B449 /* ball2.bmp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,14 +74,6 @@
 				A56688491CBBCBFE00DB251B /* Pokerstarts */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A566884B1CBBCBFE00DB251B /* Pokerstarts */ = {
-			isa = PBXGroup;
-			children = (
-				A566884C1CBBCBFE00DB251B /* main.c */,
-			);
-			path = Pokerstarts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A566884D1CBBCBFE00DB251B /* main.c in Sources */,
+				A574636F1CC7A4230015B449 /* HARD START.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +223,10 @@
 		A56688511CBBCBFE00DB251B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +234,10 @@
 		A56688521CBBCBFE00DB251B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -239,6 +261,7 @@
 				A56688521CBBCBFE00DB251B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
