@@ -3,14 +3,14 @@
 #include <SDL2/SDL.h>
 #include <SDL2_net/SDL_net.h>
 
-#define PORT 80
+#define PORT 1337
 #define MAXLEN 1024
 
-int program()
+int main(void)
 {
     IPaddress ip;
     TCPsocket sd;
-    char server[25] = "", msg2[MAXLEN] = "quit";
+    char server[25] = "", newport[MAXLEN], SYN0[MAXLEN] = "hearts", SYN1[MAXLEN] = "port";
     int port, result;
     
     strcpy(server, "130.237.84.89");
@@ -22,29 +22,41 @@ int program()
         exit(EXIT_FAILURE);
     }
     
-    if (!(sd = SDLNet_TCP_Open(&ip)))
-    {
-        fprintf(stderr, "SDLNet_TCP_Open: %s\n", SDLNet_GetError());
-        exit(EXIT_FAILURE);
-    }
+        if (!(sd = SDLNet_TCP_Open(&ip)))
+        {
+            fprintf(stderr, "SDLNet_TCP_Open: %s\n", SDLNet_GetError());
+            exit(EXIT_FAILURE);
+        }
     
-    int len;
+        int len;
     
-    len = (int) strlen(msg2)+1;
+        len = (int) strlen(SYN0)+1;
     
-    if (SDLNet_TCP_Send(sd, msg2,len) < len)
-    {
-        fprintf(stderr, "SDLNet_TCP_Send: %s\n", SDLNet_GetError());
-        exit(EXIT_FAILURE);
-    }
+        if (SDLNet_TCP_Send(sd, SYN0,len) < len)
+        {
+            fprintf(stderr, "SDLNet_TCP_Send: %s\n", SDLNet_GetError());
+            exit(EXIT_FAILURE);
+        }
     
-    result=SDLNet_TCP_Recv(sd,msg2,MAXLEN);
-    if(result<=0) {
-    }
-    printf("Received: \"%s\"\n",msg2);
+        result=SDLNet_TCP_Recv(sd,SYN0,MAXLEN);
+        if(result<=0) {
+        }
+        printf("Received: \"%s\"\n",SYN0);
     
-    SDL_Delay( 1000 );
+        if(strcmp(SYN0, "diamonds") == 0)
+        {
+            if (SDLNet_TCP_Send(sd, SYN1,len) < len)
+            {
+                fprintf(stderr, "SDLNet_TCP_Send: %s\n", SDLNet_GetError());
+                exit(EXIT_FAILURE);
+            }
+            
+            result=SDLNet_TCP_Recv(sd,SYN1,MAXLEN);
+            if(result<=0) {
+            }
+            printf("Received: \"%s\"\n",SYN1);
+            strcpy(newport, SYN1);
+        }
     
-    
-    return 0;
+        return 0;
 }

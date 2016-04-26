@@ -11,7 +11,7 @@
 		A51880BE1CC0E7140058A817 /* SDL2_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51880BB1CC0E7140058A817 /* SDL2_mixer.framework */; };
 		A51880BF1CC0E7140058A817 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51880BC1CC0E7140058A817 /* SDL2.framework */; };
 		A57463691CC65DE90015B449 /* SDL2_net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57463681CC65DE90015B449 /* SDL2_net.framework */; };
-		A574636F1CC7A4230015B449 /* HARD START.c in Sources */ = {isa = PBXBuildFile; fileRef = A574636E1CC7A4230015B449 /* HARD START.c */; };
+		A5FE7FDC1CCF50F4000A9D1C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A5FE7FDB1CCF50F4000A9D1C /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +35,7 @@
 		A57463681CC65DE90015B449 /* SDL2_net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_net.framework; path = ../../../../Library/Frameworks/SDL2_net.framework; sourceTree = "<group>"; };
 		A574636A1CC768D40015B449 /* ball.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = ball.bmp; path = "../../Library/Developer/Xcode/DerivedData/Pokerstarts-dniqalcspoxpuwejtzjcvkvxhirg/Build/Products/Debug/ball.bmp"; sourceTree = "<group>"; };
 		A574636B1CC768D40015B449 /* ball2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = ball2.bmp; path = "../../Library/Developer/Xcode/DerivedData/Pokerstarts-dniqalcspoxpuwejtzjcvkvxhirg/Build/Products/Debug/ball2.bmp"; sourceTree = "<group>"; };
-		A574636E1CC7A4230015B449 /* HARD START.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "HARD START.c"; sourceTree = "<group>"; };
+		A5FE7FDB1CCF50F4000A9D1C /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,6 @@
 		A56688401CBBCBFE00DB251B = {
 			isa = PBXGroup;
 			children = (
-				A574636E1CC7A4230015B449 /* HARD START.c */,
 				A57463681CC65DE90015B449 /* SDL2_net.framework */,
 				A51880BA1CC0E7140058A817 /* SDL2_image.framework */,
 				A51880BB1CC0E7140058A817 /* SDL2_mixer.framework */,
@@ -65,6 +64,7 @@
 				A566884A1CBBCBFE00DB251B /* Products */,
 				A574636A1CC768D40015B449 /* ball.bmp */,
 				A574636B1CC768D40015B449 /* ball2.bmp */,
+				A5FE7FDB1CCF50F4000A9D1C /* main.c */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A574636F1CC7A4230015B449 /* HARD START.c in Sources */,
+				A5FE7FDC1CCF50F4000A9D1C /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
